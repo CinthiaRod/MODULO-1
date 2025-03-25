@@ -1,0 +1,64 @@
+Resolución de conflictos
+<<<<<<< HEAD
+=======
+Nos apareció el siguiente mensaje de conflictos
+$ git pull origin main
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (6/6), 1.88 KiB | 2.00 KiB/s, done.
+From https://github.com/CinthiaRod/CLASE6-ADA
+ * branch            main       -> FETCH_HEAD
+   474e02b..b7187ec  main       -> origin/main
+Auto-merging pikachu.txt
+CONFLICT (content): Merge conflict in pikachu.txt
+
+SOLICITAMOS STATUS Y NOS APARECIÓ EL SIGUIENTE MENSAJE
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 4 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        modified:   bulbasaur.txt
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   pikachu.txt
+both modified:   squirtle.txt
+
+LUEGO SE PROCEDIÓ A AGREGAR GIT ADD PIKACHU.TXT
+GIT ADD SQUIRTLE.TXT
+GIT COMMIT -M "RESOLUCION DE CONFLICTOS"
+
+luego se hizo lo siguiente:
+$ git push origin main
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 940 bytes | 37.00 KiB/s, done.
+Total 8 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/CinthiaRod/CLASE6-ADA.git
+   b7187ec..7dbc2d4  main -> main
+
+luego se hizo 
+GIT PULL ORIGIN MAIN
+
+LUEGO SE HIZO GIT STATUS
+Para asegurarnos que está todo ok
+
+luego git log
+
+esos últimos comandos se utilizaron para asegurarnos de que esté todo bien.
+
+>>>>>>> 7807430b1dad09ae7e39be64c54d8230f510f76d
+En el archivo de squirtle.txt se dejo la opción "actual" en el archivo al momento de la resolución de problemas
+Para el archivo pikachu.txt se eligió la opción de "combinar" en la resolución de problemas
